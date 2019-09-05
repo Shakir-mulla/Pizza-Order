@@ -1,0 +1,169 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pizzapic"
+    tools:context=".MainActivity" >
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="128dp" >
+
+        <RadioButton
+            android:id="@+id/radio_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:onClick="checkButton"
+            android:text="Small - Rs.200"
+            android:textColor="#ffffff" />
+
+        <RadioButton
+            android:id="@+id/radio_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="checkButton"
+            android:text="Medium - Rs300"
+            android:textColor="#ffffff" />
+
+        <RadioButton
+            android:id="@+id/radio_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="checkButton"
+            android:text="Large - Rs.500"
+            android:textColor="#ffffff" />
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/checkBox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/radioGroup"
+        android:layout_toRightOf="@+id/radioGroup"
+        android:checked="true"
+        android:onClick="check"
+        android:text="Cheese - Rs.30"
+        android:textColor="#ffffff" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkBox1"
+        android:layout_toRightOf="@+id/radioGroup"
+        android:onClick="check"
+        android:text="Toppings - Rs.40"
+        android:textColor="#ffffff" />
+
+    <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkBox2"
+        android:layout_toRightOf="@+id/radioGroup"
+        android:onClick="check"
+        android:text="Veggies - Rs.50"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/text_view_selected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editText1"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="49dp"
+        android:layout_marginLeft="17dp"
+        android:text="Total Price:"
+        android:textColor="#ffffff"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/text_view_selected"
+        android:layout_alignBottom="@+id/text_view_selected"
+        android:layout_toLeftOf="@+id/checkBox3"
+        android:text="0000"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/text_view_selected"
+        android:layout_alignLeft="@+id/text_view_selected"
+        android:text="Delivery charges: +50"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#ffffff" />
+    
+     <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="©shakir"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#ffffff" />
+
+     <Button
+         android:id="@+id/button2"
+         style="?android:attr/buttonStyleSmall"
+         android:layout_width="wrap_content"
+         android:layout_height="25dp"
+         android:layout_alignBottom="@+id/editText1"
+         android:layout_toRightOf="@+id/editText1"
+         android:background="#483d8b"
+         android:onClick="disc"
+         android:text="Apply" />
+
+     <Button
+         android:id="@+id/button1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentBottom="true"
+         android:layout_marginBottom="30dp"
+         android:layout_toRightOf="@+id/textView1"
+         android:text="Next" />
+
+     <EditText
+         android:id="@+id/editText1"
+         android:layout_width="175dp"
+         android:layout_height="wrap_content"
+         android:layout_above="@+id/button1"
+         android:layout_alignLeft="@+id/text_view_selected"
+         android:layout_marginBottom="16dp"
+         android:ems="10"
+         android:hint="Apply Coupon "
+         android:textColor="#ffffff" >
+
+         <requestFocus />
+     </EditText>
+
+     <TextView
+         android:id="@+id/textView2"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignBottom="@+id/textView3"
+         android:layout_toRightOf="@+id/imageView1"
+         android:text="Offers"
+         android:textAppearance="?android:attr/textAppearanceSmall"
+          android:textColor="#ffffff" />
+
+     <ImageView
+         android:id="@+id/imageView1"
+         android:layout_width="20dp"
+         android:layout_height="20dp"
+         android:layout_above="@+id/text_view_selected"
+         android:layout_toRightOf="@+id/editText1"
+         android:src="@android:drawable/ic_dialog_info"
+         android:onClick="offer" />
+
+</RelativeLayout>
